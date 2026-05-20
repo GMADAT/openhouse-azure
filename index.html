@@ -43,6 +43,127 @@ html, body {
 }
 
 /* ══════════════════════════════
+   PAGE 4 — LIFESTYLE & FEATURES
+══════════════════════════════ */
+#page4 .p4-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  filter: blur(1px) saturate(0.7) brightness(0.8);
+  z-index: 0;
+  transform: scale(1.05);
+}
+#page4 .p4-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    105deg,
+    rgba(4,4,6,0.92) 0%,
+    rgba(4,4,6,0.75) 50%,
+    rgba(4,4,6,0.60) 100%
+  );
+}
+.p4-content {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 3rem 4rem;
+  gap: 4rem;
+}
+.p4-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.p4-eyebrow {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.p4-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.01em;
+}
+.p4-title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+.p4-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin-bottom: 1.2rem;
+}
+.p4-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-style: italic;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.85;
+  max-width: 320px;
+}
+.p4-right {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.p4-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.p4-feature-group {
+  border: 1px solid rgba(201,168,76,0.12);
+  background: rgba(4,4,6,0.6);
+  backdrop-filter: blur(8px);
+  padding: 1.2rem 1.5rem;
+  transition: border-color 0.3s, background 0.3s;
+}
+.p4-feature-group:hover {
+  border-color: rgba(201,168,76,0.3);
+  background: rgba(201,168,76,0.04);
+}
+.p4-group-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+.p4-feat-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 1rem;
+}
+.p4-feat {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.55);
+  transition: color 0.3s;
+}
+.p4-feat:hover { color: var(--gold-light); }
+
+/* ══════════════════════════════
    PAGE 3 — PHOTO GALLERY
 ══════════════════════════════ */
 #page3 .p3-bg {
@@ -681,12 +802,12 @@ html, body {
 <!-- ══ PAGE 1 ══ -->
 <div class="page active" id="page1">
   <video class="video-bg" autoplay muted loop playsinline id="bgVideo">
-    <source src="drone.mp4" type="video/mp4">
+    <source src="drone.mp4.mp4" type="video/mp4">
   </video>
   <div class="overlay"></div>
   <div class="content">
     <div class="agent-circle">
-      <img src="agent.png" alt="Ethan Cole">
+      <img src="agent.png.png" alt="Ethan Cole">
     </div>
     <div class="eyebrow">Exclusive Listing</div>
     <div class="main-title">Coming<br>Soon</div>
@@ -702,7 +823,7 @@ html, body {
 <!-- ══ PAGE 2 ══ -->
 <div class="page" id="page2">
   <video class="p2-video-bg" autoplay muted loop playsinline>
-    <source src="pool.mp4" type="video/mp4">
+    <source src="pool.mp4.mp4" type="video/mp4">
   </video>
   <div class="p2-bg"></div>
   <div class="p2-particles" id="p2Particles"></div>
@@ -754,7 +875,7 @@ html, body {
   <div class="p3-content">
 
     <div class="p3-left">
-      <img class="p3-main-img" id="p3MainImg" src="living-room.png" alt="Main photo">
+      <img class="p3-main-img" id="p3MainImg" src="living-room.png.png" alt="Main photo">
       <div class="p3-main-label" id="p3MainLabel">Great Room</div>
     </div>
 
@@ -766,30 +887,90 @@ html, body {
       </div>
 
       <div class="p3-thumbs">
-        <div class="p3-thumb active" onclick="switchPhoto(this, 'living-room.png', 'Great Room')">
-          <img src="living-room.png" alt="Living Room">
+        <div class="p3-thumb active" onclick="switchPhoto(this, 'living-room.png.png', 'Great Room')">
+          <img src="living-room.png.png" alt="Living Room">
           <span>Great Room</span>
         </div>
-        <div class="p3-thumb" onclick="switchPhoto(this, 'kitchen.png', 'Chef\'s Kitchen')">
-          <img src="kitchen.png" alt="Kitchen">
+        <div class="p3-thumb" onclick="switchPhoto(this, 'kitchen.png.png', 'Chef\'s Kitchen')">
+          <img src="kitchen.png.png" alt="Kitchen">
           <span>Chef's Kitchen</span>
         </div>
-        <div class="p3-thumb" onclick="switchPhoto(this, 'bedroom.png', 'Owner\'s Retreat')">
-          <img src="bedroom.png" alt="Bedroom">
+        <div class="p3-thumb" onclick="switchPhoto(this, 'bedroom.png.png', 'Owner\'s Retreat')">
+          <img src="bedroom.png.png" alt="Bedroom">
           <span>Owner's Retreat</span>
         </div>
-        <div class="p3-thumb" onclick="switchPhoto(this, 'bathroom.png', 'Spa Bathroom')">
-          <img src="bathroom.png" alt="Bathroom">
+        <div class="p3-thumb" onclick="switchPhoto(this, 'bathroom.png.png', 'Spa Bathroom')">
+          <img src="bathroom.png.png" alt="Bathroom">
           <span>Spa Bathroom</span>
         </div>
-        <div class="p3-thumb" onclick="switchPhoto(this, 'backyard.png', 'Resort Grounds')">
-          <img src="backyard.png" alt="Backyard">
+        <div class="p3-thumb" onclick="switchPhoto(this, 'backyard.png.png', 'Resort Grounds')">
+          <img src="backyard.png.png" alt="Backyard">
           <span>Resort Grounds</span>
         </div>
       </div>
 
       <div class="p3-address">
         1781 Azure Crest Drive &nbsp;·&nbsp; Miami Lakes &nbsp;·&nbsp; FL 33176
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ PAGE 4 ══ -->
+<div class="page" id="page4">
+  <video class="p4-video-bg" autoplay muted loop playsinline>
+    <source src="pool.mp4" type="video/mp4">
+  </video>
+  <div class="p4-overlay"></div>
+  <div class="p4-content">
+
+    <div class="p4-left">
+      <span class="p4-eyebrow">Lifestyle &amp; Features</span>
+      <h2 class="p4-title">Designed for<br><em>Extraordinary</em><br>Living</h2>
+      <div class="p4-line"></div>
+      <p class="p4-desc">Every detail of Azure Cove Estate has been curated for those who demand the finest in modern luxury living.</p>
+    </div>
+
+    <div class="p4-right">
+      <div class="p4-features">
+
+        <div class="p4-feature-group">
+          <div class="p4-group-title">Interior</div>
+          <div class="p4-feat-list">
+            <div class="p4-feat">✦ 24-Foot Ceilings &amp; Floor-to-Ceiling Glass</div>
+            <div class="p4-feat">✦ Floating Italian Marble Staircase</div>
+            <div class="p4-feat">✦ Temperature-Controlled Wine Wall</div>
+            <div class="p4-feat">✦ Private Home Theater</div>
+            <div class="p4-feat">✦ Wellness Gym &amp; Private Sauna</div>
+            <div class="p4-feat">✦ Executive Office Suite</div>
+          </div>
+        </div>
+
+        <div class="p4-feature-group">
+          <div class="p4-group-title">Exterior</div>
+          <div class="p4-feat-list">
+            <div class="p4-feat">✦ Infinity-Edge Pool &amp; Spa</div>
+            <div class="p4-feat">✦ Outdoor Summer Kitchen</div>
+            <div class="p4-feat">✦ Private Lakefront Deck</div>
+            <div class="p4-feat">✦ Rooftop Terrace</div>
+            <div class="p4-feat">✦ Resort Landscape Lighting</div>
+            <div class="p4-feat">✦ Private Gated Driveway</div>
+          </div>
+        </div>
+
+        <div class="p4-feature-group">
+          <div class="p4-group-title">Smart Home</div>
+          <div class="p4-feat-list">
+            <div class="p4-feat">✦ Voice-Controlled Lighting</div>
+            <div class="p4-feat">✦ Full Security Camera System</div>
+            <div class="p4-feat">✦ Motorized Blinds &amp; Climate Control</div>
+            <div class="p4-feat">✦ Multi-Zone Audio System</div>
+            <div class="p4-feat">✦ EV Charging Stations</div>
+            <div class="p4-feat">✦ 6-Car Climate Controlled Garage</div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -805,6 +986,7 @@ html, body {
   <div class="dot active" onclick="goTo(0)"></div>
   <div class="dot" onclick="goTo(1)"></div>
   <div class="dot" onclick="goTo(2)"></div>
+  <div class="dot" onclick="goTo(3)"></div>
 </div>
 
 <!-- ══ PLAY BTN ══ -->
