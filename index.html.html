@@ -43,6 +43,161 @@ html, body {
 }
 
 /* ══════════════════════════════
+   PAGE 5 — AGENT CONTACT
+══════════════════════════════ */
+#page5 .p5-bg {
+  position: absolute;
+  inset: 0;
+  background: #080810;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.04) 0%, transparent 60%);
+}
+.p5-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+.p5-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  border-right: 1px solid rgba(201,168,76,0.1);
+}
+.p5-agent-img {
+  width: 280px;
+  height: 360px;
+  border: 1px solid rgba(201,168,76,0.35);
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(201,168,76,0.08);
+}
+.p5-agent-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: brightness(0.95);
+}
+.p5-right {
+  flex: 1.4;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.p5-eyebrow {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.p5-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+.p5-name em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+.p5-title-tag {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 0.5rem;
+}
+.p5-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1rem 0 1.5rem;
+}
+.p5-info-box {
+  border: 1px solid rgba(201,168,76,0.2);
+  background: rgba(201,168,76,0.05);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.p5-info-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+.p5-info-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #fff;
+}
+.p5-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.p5-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.p5-contact-icon {
+  font-size: 0.9rem;
+  color: var(--gold);
+  width: 20px;
+  text-align: center;
+}
+.p5-contact-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 0.2rem;
+}
+.p5-contact-value {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.05em;
+}
+.p5-contact-value.gold {
+  color: var(--gold-light);
+  font-size: 1rem;
+}
+.p5-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  padding: 1.1rem 2rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.p5-btn:hover {
+  background: var(--gold-light);
+  box-shadow: 0 0 30px rgba(201,168,76,0.3);
+}
+
+/* ══════════════════════════════
    PAGE 4 — LIFESTYLE & FEATURES
 ══════════════════════════════ */
 #page4 .p4-video-bg {
@@ -977,6 +1132,60 @@ html, body {
   </div>
 </div>
 
+<!-- ══ PAGE 5 ══ -->
+<div class="page" id="page5">
+  <div class="p5-bg"></div>
+  <div class="p5-content">
+
+    <div class="p5-left">
+      <div class="p5-agent-img">
+        <img src="agent.png" alt="Ethan Cole">
+      </div>
+    </div>
+
+    <div class="p5-right">
+      <div class="p5-eyebrow">Your Listing Agent</div>
+      <div class="p5-name">Ethan Cole<br><em>Luxury Estates</em></div>
+      <div class="p5-title-tag">Luxury Real Estate Specialist · Miami Lakes</div>
+      <div class="p5-divider"></div>
+
+      <div class="p5-info-box">
+        <div class="p5-info-label">Private Showings</div>
+        <div class="p5-info-value">Beginning Soon · By Appointment Only</div>
+      </div>
+
+      <div class="p5-contacts">
+        <div class="p5-contact-item">
+          <div class="p5-contact-icon">📞</div>
+          <div>
+            <div class="p5-contact-label">Phone / Text</div>
+            <div class="p5-contact-value">(305) 555-0198</div>
+          </div>
+        </div>
+        <div class="p5-contact-item">
+          <div class="p5-contact-icon">✉</div>
+          <div>
+            <div class="p5-contact-label">Email</div>
+            <div class="p5-contact-value">contact@ethancoleluxury.com</div>
+          </div>
+        </div>
+        <div class="p5-contact-item">
+          <div class="p5-contact-icon">◆</div>
+          <div>
+            <div class="p5-contact-label">Listed At</div>
+            <div class="p5-contact-value gold">$8,950,000</div>
+          </div>
+        </div>
+      </div>
+
+      <a class="p5-btn" href="mailto:contact@ethancoleluxury.com">
+        Request Private Showing
+      </a>
+    </div>
+
+  </div>
+</div>
+
 <!-- ══ NAV ARROWS ══ -->
 <div class="nav-arrow left hidden" id="arrowLeft">&#8249;</div>
 <div class="nav-arrow right" id="arrowRight">&#8250;</div>
@@ -987,6 +1196,7 @@ html, body {
   <div class="dot" onclick="goTo(1)"></div>
   <div class="dot" onclick="goTo(2)"></div>
   <div class="dot" onclick="goTo(3)"></div>
+  <div class="dot" onclick="goTo(4)"></div>
 </div>
 
 <!-- ══ PLAY BTN ══ -->
