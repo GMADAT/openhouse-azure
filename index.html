@@ -726,7 +726,48 @@ html, body {
 }
 
 
-/* ── PAGE 1 ── */
+@media (max-width: 768px) {
+  /* PAGE 3 MOBILE */
+  .p3-content { flex-direction: column; }
+  .p3-left { flex: none; height: 45vh; width: 100%; }
+  .p3-right {
+    flex: none;
+    width: 100%;
+    padding: 1rem 1.2rem;
+    overflow-y: auto;
+    border-left: none;
+    border-top: 1px solid rgba(201,168,76,0.1);
+  }
+  .p3-thumbs { flex-direction: row; flex-wrap: wrap; gap: 0.4rem; }
+  .p3-thumb { width: calc(50% - 0.2rem); }
+  .p3-thumb img { width: 50px; height: 36px; }
+
+  /* PAGE 4 MOBILE */
+  .p4-content { flex-direction: column; padding: 1.5rem; gap: 1.5rem; overflow-y: auto; }
+  .p4-left { flex: none; }
+  .p4-right { flex: none; }
+  .p4-feat-list { grid-template-columns: 1fr; }
+
+  /* PAGE 5 MOBILE */
+  .p5-content { flex-direction: column; overflow-y: auto; }
+  .p5-left {
+    flex: none;
+    width: 100%;
+    height: 40vh;
+    border-right: none;
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+  }
+  .p5-agent-img {
+    width: 160px;
+    height: 210px;
+  }
+  .p5-right {
+    flex: none;
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .p5-name { font-size: 2rem; }
+}
 #page1 .video-bg {
   position: absolute;
   inset: 0;
